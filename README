@@ -6,6 +6,7 @@ We manually annotated the orthoimages with rectangles (bounding boxes) in QGIS s
 
 bbox_list = txt for each image with with the coordinates of the bounding box;
 rgb = rgb patchs;
-gt = rgb patches with ground truth .
+gt = rgb patches with ground truth;
+In the img_list folder there are 5 folders (0,1,2,3 and 4). In each folder there are 3 txt files (train, val and test). In each of these files you will find the list of images used for training, validation and testing in each training round.
 
 In the MMdetecion_v_2_0.ipynb is the code used to train and test the models in Google Colab.
