@@ -1,0 +1,11 @@
+Benchmarking Anchor-based and Anchor-free State-of-the-artDeep Learning Methods for Individual Tree detection in RGBHigh-resolution Images
+
+We used two RGB high-resolution orthoimages with 5619 x 5946 pixels with ground116sample distance (GSD) equal to 10 cm of Campo Grande urban area, Mato Grosso do Sul117state, Brazil (Figure 1). These are airborne images collected in 2013 by the city hall of118Campo Grande. Campo Grande has 96.3% of urban households on public roads with119afforestation being recognized [44], in 2019, as Tree Cities of the World by the Food120and Agriculture Organization of the United Nations and the Arbor Day Foundation121(Figure 1). A total of 161 plant species were identified on the streets of the municipality122totaling more than 150 thousand trees.Licania tomentosais the most abundant species123representing 18.35% followed byFicus benjaminawith 18.18%, and 66 species presented124only one individual.
+
+We manually annotated the orthoimages with rectangles (bounding boxes) in QGIS software. Since the object detection inputs are patches of images; the orthoimages were split into 220 non-overlapping patches of 512 x 512 pixels (51.20 m x 51.20 m), which represents an area of 2621.44 m^2 per patch. The manually annotated polygons were converted into bounding boxes, where 3382 trees were identified as ground-truth. The object detection methods were trained to learn and predict the bounding box coordinates in the images given the ground-truth data.
+
+bbox_list = txt for each image with with the coordinates of the bounding box;
+rgb = rgb patchs;
+gt = rgb patches with ground truth .
+
+In the MMdetecion_v_2_0.ipynb is the code used to train and test the models in Google Colab.
